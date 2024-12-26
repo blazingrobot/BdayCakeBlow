@@ -1,5 +1,9 @@
 html,
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Hide horizontal scrollbar */
+  overflow-y: auto;    /* Show vertical scrollbar only when needed */
   height: 100%;
 }
 body {
@@ -12,10 +16,11 @@ body {
   background: radial-gradient(ellipse at center, #a27bcc 0%, #6c5299 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a27bcc', endColorstr='#6c5299', GradientType=1);
 }
+
 /* ============================================== POSITION */
 .cake {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   margin-left: -240px;  
   margin-top: -240px;   
@@ -175,7 +180,7 @@ p {
 h1 {
   position: absolute;
   left: 50%;
-  top: calc(50% - 240px); 
+  top: calc(50% - 270px); 
   transform: translateX(-50%); 
   color: #dad7b3;
   font-family: v;
@@ -183,9 +188,35 @@ h1 {
 }
 p {
   position: absolute;
-  left: 1em;
+  left: 0em;
   top: 30rem;
   color: #ece7e399;
   font-size: 1.2em;
   line-height: 2em;
+}
+
+.simple-button {
+  position: absolute;
+  left: 36em;
+  top: 43rem;
+  background-color: #6c5299;  /* Purple background */
+  color: white;               /* White text */
+  border: none;               /* No border */
+  padding: 12px 20px;         /* Padding for button size */
+  font-size: 1.2em;           /* Text size */
+  cursor: pointer;           /* Pointer cursor on hover */
+  border-radius: 8px;         /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.simple-button:hover {
+  background-color: #5c3371;  /* Darker purple background */
+  transform: scale(1.05);      /* Slight zoom effect */
+}
+
+/* Active effect (when the button is clicked) */
+.simple-button:active {
+  background-color: #5c3a6e;  /* Even darker purple on click */
+  transform: scale(0.98);      /* Slight shrink effect */
 }
