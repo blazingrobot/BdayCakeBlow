@@ -195,28 +195,33 @@ p {
   line-height: 2em;
 }
 
+.container {
+  text-align: center; /* Center-align text and inline elements */
+  margin: 0 auto;     /* Center the container if it's not full width */
+  padding: 20px;      /* Add padding for better spacing */
+}
+
 .simple-button {
-  position: absolute;
-  left: 36em;
-  top: 43rem;
-  background-color: #6c5299;  /* Purple background */
-  color: white;               /* White text */
-  border: none;               /* No border */
-  padding: 12px 20px;         /* Padding for button size */
-  font-size: 1.2em;           /* Text size */
+  display: inline-block;     /* Ensures the button behaves like an inline element for centering */
+  margin-top: 40rem;          /* Adds space between the button and the last text */
+  background-color: #6c5299; /* Purple background */
+  color: white;              /* White text */
+  border: none;              /* No border */
+  padding: 12px 20px;        /* Padding for button size */
+  font-size: 1.2em;          /* Text size */
   cursor: pointer;           /* Pointer cursor on hover */
-  border-radius: 8px;         /* Rounded corners */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+  border-radius: 8px;        /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
 }
 
 /* Hover effect */
 .simple-button:hover {
-  background-color: #5c3371;  /* Darker purple background */
-  transform: scale(1.05);      /* Slight zoom effect */
+  background-color: #5c3371; /* Darker purple */
+  transform: scale(1.05);    /* Slight zoom effect */
 }
 
-/* Active effect (when the button is clicked) */
+/* Active effect */
 .simple-button:active {
-  background-color: #5c3a6e;  /* Even darker purple on click */
-  transform: scale(0.98);      /* Slight shrink effect */
+  background-color: #5c3a6e; /* Even darker purple */
+  transform: scale(0.98);    /* Slight shrink effect */
 }
